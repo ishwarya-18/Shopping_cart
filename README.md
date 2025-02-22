@@ -58,9 +58,9 @@ A simple and interactive **Shopping Cart** application that allows users to add 
 
 **## 🤝 Contributing**  
 1. Fork the repository  
-2. Create a feature branch (`git checkout -b feature-name`)  
-3. Commit changes (`git commit -m "Added new feature"`)  
-4. Push to GitHub (`git push origin feature-name`)  
+2. Create a feature branch 
+3. Commit changes 
+4. Push to GitHub 
 5. Open a **Pull Request**  
 
 **## 📞 Contact**  
