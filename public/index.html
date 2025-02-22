@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Checkout</h2>
+        <div class="steps">
+            <button class="step-btn active" data-step="cart">Cart</button>
+            <button class="step-btn" data-step="shipping">Shipping</button>
+            <button class="step-btn" data-step="payment">Payment</button>
+        </div>
+
+        <div class="step-content" id="cart">
+            <h3>Shopping Cart</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <tr>
+                        <td>Wireless Headphones</td>
+                        <td>$50</td>
+                        <td><input type="number" value="1" min="1" class="quantity-input" data-price="50"></td>
+                        <td class="total-price">$50</td>
+                    </tr>
+                    <tr>
+                        <td>Smart Watch</td>
+                        <td>$80</td>
+                        <td><input type="number" value="1" min="1" class="quantity-input" data-price="80"></td>
+                        <td class="total-price">$80</td>
+                    </tr>
+                    <tr>
+                        <td>Bluetooth Speaker</td>
+                        <td>$40</td>
+                        <td><input type="number" value="1" min="1" class="quantity-input" data-price="40"></td>
+                        <td class="total-price">$40</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Grand Total: $<span id="grand-total">170</span></h3>
+            <button id="next-to-shipping">Next</button>
+        </div>
+
+        <div class="step-content hidden" id="shipping">
+            <h3>Shipping Details</h3>
+            <form id="shipping-form">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="phone" placeholder="Phone Number" required> <!-- ✅ Added -->
+                <input type="text" id="address" placeholder="Address" required>
+                <input type="text" id="zip" placeholder="ZIP Code" required>
+                <button type="button" id="next-to-payment">Next</button>
+            </form>
+        </div>
+
+        <div class="step-content hidden" id="payment">
+            <h3>Payment Options</h3>
+            <form id="checkout-form">
+                <select id="payment-method">
+                    <option value="card">Credit/Debit Card</option>
+                    <option value="upi">UPI</option>
+                    <option value="netbanking">Net Banking</option>
+                    <option value="cod">Cash on Delivery</option>
+                </select>
+                <div id="payment-details">
+                    <input type="text" id="card-number" placeholder="Card Number" maxlength="16">
+                    <input type="text" id="expiry" placeholder="MM/YY" maxlength="5">
+                    <input type="text" id="cvv" placeholder="CVV" maxlength="3">
+                </div>
+                <button type="submit">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
